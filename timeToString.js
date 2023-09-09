@@ -12,11 +12,17 @@ const hourStrings = [
     "kilenc",
     "tíz",
     "tizenegy",
-    "tizenkettő"
+    "tizenkettő",
+    "egy"
 ]
 
+const minStrings = [];
+minStrings[5] = "öt";
+minStrings[10] = "tíz";
 
-export default function timeToString(date) {
+
+
+export default function timeToString(date, minsAffix = "") {
     let [hours, mins] = normalizeTime(date);
     if(mins == 0)
         return wholeHourString(hours);
@@ -28,27 +34,28 @@ export default function timeToString(date) {
         return threequarterString(hours);
 
     switch(mins) {
+        case 0:
+            return `${hourStrings[hours]} óra van`;
         case 5:
         case 10:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `${hourStrings[hours]} óra múlt ${minStrings[mins]}${minsAffix} perccel`;
         case 15:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `negyed ${hourStrings[hours + 1]} van`;
         case 20:
-            return `${hours} óra múlt ${mins} perccel`;
         case 25:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `fél ${hourStrings[hours + 1]} lesz ${minStrings[30 - mins]}${minsAffix} perc múlva`;
         case 30:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `fél ${hourStrings[hours + 1]} van`;
         case 35:
-            return `${hours} óra múlt ${mins} perccel`;
         case 40:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `fél ${hourStrings[hours + 1]} múlt ${minStrings[mins - 30]}${minsAffix} perccel`;
         case 45:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `háromnegyed ${hourStrings[hours + 1]} van`;
         case 50:
-            return `${hours} óra múlt ${mins} perccel`;
         case 55:
-            return `${hours} óra múlt ${mins} perccel`;
+            return `${hourStrings[hours + 1]} óra lesz ${minStrings[60 - mins]}${minsAffix} perc múlva`;
+        default:
+            return `${hourStrings[hours]} óra múlt ${mins} perccel`;
     }
 }
 

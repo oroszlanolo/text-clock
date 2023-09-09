@@ -1,4 +1,4 @@
-[
+export const layoutData = [
     [
         { "val": "h", "classes": ["háromnegyed"] },
         { "val": "á", "classes": ["háromnegyed"] },
@@ -142,4 +142,4 @@
         { "val": "v", "classes": ["múlva"] },
         { "val": "a", "classes": ["múlva"] }
     ]
-]
+];
