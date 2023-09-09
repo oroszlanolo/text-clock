@@ -12,4 +12,6 @@ function updateLayout() {
     });
 }
 
-updateLayout();
+
+
+updateLayout(updateLayout, 1000);
