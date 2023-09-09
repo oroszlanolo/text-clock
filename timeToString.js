@@ -65,7 +65,7 @@ function normalizeTime(date) {
     if(mins > 57) {
         hours++;
     }
-    mins = Math.round(mins / 5) * 5;
+    mins = Math.round(mins / 5) * 5 % 60;
     hours = hours > 12 ? hours - 12 : hours;
     return [hours, mins];
 }
