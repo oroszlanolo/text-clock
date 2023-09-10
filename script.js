@@ -18,5 +18,5 @@ function updateLayout() {
 }
 
 
-
+updateLayout();
 setInterval(updateLayout, 1000);
