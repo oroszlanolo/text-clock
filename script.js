@@ -3,15 +3,20 @@ import {createLayout, highlightWord, resetHighlight} from "./layout.js";
 
 createLayout();
 
+let prevString;
+
 function updateLayout() {
-    resetHighlight();
     const date = new Date();
     const timeString = timeToString(date, "-perc");
-    timeString.split(' ').forEach(word => {
-        highlightWord(word);
-    });
+    if(prevString != timeString) {
+        prevString = timeString;
+        resetHighlight();
+        timeString.split(' ').forEach(word => {
+            highlightWord(word);
+        });
+    }
 }
 
 
 
-updateLayout(updateLayout, 1000);
+setInterval(updateLayout, 1000);

@@ -20,7 +20,6 @@ let highlights = [];
 
 export function highlightWord(word) {
     highlights.push(word);
-    console.log(word);
     const items = document.getElementsByClassName(word)
     for(let element of items){
         element.classList.add("highlighted");
