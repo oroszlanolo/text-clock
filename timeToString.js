@@ -24,14 +24,6 @@ minStrings[10] = "tíz";
 
 export default function timeToString(date, minsAffix = "") {
     let [hours, mins] = normalizeTime(date);
-    if(mins == 0)
-        return wholeHourString(hours);
-    if(mins === 15)
-        return quarterString(hours);
-    if(mins === 30)
-        return halfString(hours);
-    if(mins === 45)
-        return threequarterString(hours);
 
     switch(mins) {
         case 0:
@@ -68,21 +60,5 @@ function normalizeTime(date) {
     mins = Math.round(mins / 5) * 5 % 60;
     hours = hours > 12 ? hours - 12 : hours;
     return [hours, mins];
-}
-
-function wholeHourString(hours) {
-    return `${hourStrings[hours]} óra van`;
-}
-function quarterString(hours) {
-    const hourToShow = hours == 12 ? 1 : hours + 1;
-    return `negyed ${hourStrings[hourToShow]} van`;
-}
-function halfString(hours) {
-    const hourToShow = hours == 12 ? 1 : hours + 1;
-    return `fél ${hourStrings[hourToShow]} van`;
-}
-function threequarterString(hours) {
-    const hourToShow = hours == 12 ? 1 : hours + 1;
-    return `háromnegyed ${hourStrings[hourToShow]} van`;
 }
 
