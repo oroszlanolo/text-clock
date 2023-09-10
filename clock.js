@@ -130,12 +130,12 @@ export const layoutData = [
         { "val": "l", "classes": ["perccel"] }
     ],
     [
+        { "val": "g", "classes": [] },
         { "val": "b", "classes": [] },
         { "val": "e", "classes": [] },
         { "val": "n", "classes": [] },
         { "val": "d", "classes": [] },
         { "val": "i", "classes": [] },
-        { "val": "g", "classes": [] },
         { "val": "m", "classes": ["múlva"] },
         { "val": "ú", "classes": ["múlva"] },
         { "val": "l", "classes": ["múlva"] },
