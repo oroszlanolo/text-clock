@@ -1,6 +1,6 @@
 
 const hourStrings = [
-    "nulla",
+    "tizenkettő",
     "egy",
     "kettő",
     "három",

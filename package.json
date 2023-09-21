@@ -1,0 +1,29 @@
+{
+  "name": "text-clock",
+  "version": "1.0.0",
+  "description": "clock visualization with text in hungarian",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oroszlanolo/text-clock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oroszlanolo/text-clock/issues"
+  },
+  "homepage": "https://github.com/oroszlanolo/text-clock#readme",
+  "dependencies": {
+    "unit.js": "^2.1.1"
+  },
+  "devDependencies": {
+    "mocha-testdata": "^1.2.0"
+  }
+}
