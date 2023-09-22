@@ -102,5 +102,5 @@ export const minAffixExpectation = [
     [new Date('December 17, 1995 04:05:00'), "almafa", "négy óra múlt ötalmafa perccel" ],
     [new Date('December 17, 1995 04:10:00'), "almafa", "négy óra múlt tízalmafa perccel" ],
     [new Date('December 17, 1995 04:50:00'), "almafa", "öt óra lesz tízalmafa perc múlva" ],
-    [new Date('December 17, 1995 04:55:00'), "almafa", "öt óra lesz ötalmafa perc múlva" ],
+    [new Date('December 17, 1995 04:55:00'), "almaf", "öt óra lesz ötalmafa perc múlva" ],
 ]
