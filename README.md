@@ -1,2 +1,2 @@
 # text-clock
- clock visualization with text in hungarian
+ Clock visualization with text in Hungarian.
