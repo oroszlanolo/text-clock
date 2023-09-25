@@ -1,13 +1,13 @@
 import { layoutData } from "./clock.js";
 
-const clockElement = document.getElementById("clock");
 
-export function createLayout() {
+export function createLayout(doc = document) {
+    const clockElement = doc.getElementById("clock");
     for(let row of layoutData) {
-        const rowElement = document.createElement('div');
+        const rowElement = doc.createElement('div');
         rowElement.className = 'row';
         for(let item of row) {
-            const itemElement = document.createElement('div');
+            const itemElement = doc.createElement('div');
             itemElement.innerHTML = item.val.toUpperCase()  ;
             itemElement.className = item.classes.join(' ');
             rowElement.appendChild(itemElement);
@@ -18,17 +18,17 @@ export function createLayout() {
 
 let highlights = [];
 
-export function highlightWord(word) {
+export function highlightWord(word, doc = document) {
     highlights.push(word);
-    const items = document.getElementsByClassName(word)
+    const items = doc.getElementsByClassName(word)
     for(let element of items){
         element.classList.add("highlighted");
     };
 }
 
-export function resetHighlight() {
+export function resetHighlight(doc = document) {
     for(let word of highlights) {
-        const items = document.getElementsByClassName(word)
+        const items = doc.getElementsByClassName(word)
         for(let element of items){
             element.classList.remove("highlighted");
         };
